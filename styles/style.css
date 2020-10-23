@@ -1,0 +1,699 @@
+@font-face {
+    font-family: "Gotham Pro";
+    src: url("../fonts/ofont.ru_Gotham Pro.ttf")
+}
+
+.container-fluid {
+    height:100%;
+    min-width: 100%;
+    position:absolute;
+    -webkit-overflow-scrolling: touch;
+    overflow:auto;
+}
+.startPage_1 {
+    background: linear-gradient(46.27deg, #38A84D -11.97%, #F6D25C 137.77%);
+}
+.startPage_2 {
+    background: linear-gradient(0deg, #38A84D, #38A84D), linear-gradient(41.7deg, #D83253 -56.17%, #F6D25C 125.45%);
+}
+.startPage_3 {
+    background: white;
+}
+.container {
+    width:100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    height:100%;
+
+}
+a {
+    color: black;
+    font-weight: 800;
+}
+a:hover {
+    color: #38A84D;
+}
+/* Квиз */
+.quiz {
+    display:flex;
+    align-items:center;
+    font-family: "Gotham Pro";
+
+}
+.listQuestions {
+    font-family: Gotham Pro;
+    color: #38A84D;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 60px;
+}
+.answer li {
+    margin-bottom:40px;
+    display: flex;
+
+    width: 40%;
+}
+.answer_1 li {
+    margin-bottom:40px;
+    display: flex;
+    width: 40%;
+}
+
+.answerList {
+    list-style: none;
+}
+.answer label {
+    margin-left:10px;
+    letter-spacing:1px;
+    width:100%;
+    cursor:pointer;
+    line-height: 24px;
+
+}
+
+
+.answer input[type='radio'] {
+    visibility: hidden;
+    width: 20px;
+    cursor:pointer;
+    height: 20px;
+    margin: 0 5px 0 5px;
+    padding: 0;
+}
+.answer input[type='radio']:before {
+    position: relative;
+    margin: 4px -25px -4px 0;
+    display: inline-block;
+    visibility: visible;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: 2px solid #38A84D;
+    transition: 0.5s;
+    content: "";
+}
+.answer input[type='radio']:checked:after {
+    position: relative;
+    top: 0;
+    left: 9px;
+    display: inline-block;
+    visibility: visible;
+    border-radius: 6px;
+    width: 12px;
+    height: 12px;
+    background: #38A84D;
+    content: "";
+}
+.answer input[type='radio']:hover:before {
+    filter: brightness(120%);
+    background: #38A84D;
+    border:2px solid white;
+}
+.answer input[type='radio']:checked:hover:after {
+    filter: brightness(120%);
+
+}
+.answer li:hover  input[type='radio']:before{
+
+    background: #38A84D;
+    border:2px solid white;
+}
+
+.answer_1 label {
+    margin-left:10px;
+    letter-spacing:1px;
+    width:100%;
+    cursor: pointer;
+    line-height: 24px;
+
+}
+
+.answer_1 input[type='radio'] {
+    visibility: hidden;
+    width: 20px;
+    cursor:pointer;
+    height: 20px;
+    margin: 0 5px 0 5px;
+    padding: 0;
+}
+.answer_1 input[type=radio]:before {
+    position: relative;
+    margin: 4px -25px -4px 0;
+    display: inline-block;
+    visibility: visible;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: 2px solid #38A84D;
+    transition: 0.5s;
+    content: "";
+}
+.answer_1 input[type=radio]:checked:after {
+    position: relative;
+    top: 0;
+    left: 9px;
+    display: inline-block;
+    visibility: visible;
+    border-radius: 6px;
+    width: 12px;
+    height: 12px;
+    background: #38A84D;
+    content: "";
+}
+.answer_1 input[type=radio]:hover:before {
+    filter: brightness(120%);
+    background: #38A84D;
+    border:2px solid white;
+}
+.answer_1 input[type=radio]:checked:hover:after {
+    filter: brightness(120%);
+
+}
+.answer_1 li:hover  input[type='radio']:before{
+    background: #38A84D;
+    border:2px solid white;
+}
+.question {
+    margin-top: 40px;
+    font-style: normal;
+    font-weight: 800;
+    color: #38A84D;
+    font-family: Gotham Pro;
+    width:80%;
+    font-size: 24px;
+    padding-left: 15%;
+    line-height: 30px;
+
+}
+
+.stepCounter {
+    margin-top:100px;
+    font-style: normal;
+    font-weight: 300;
+    color: #38A84D;
+    font-family: Gotham Pro;
+    width:80%;
+    font-size: 24px;
+    padding-left: 15%;
+}
+.stepCounter1 {
+    margin-top:160px;
+    font-style: normal;
+    font-weight: 300;
+    color: #38A84D;
+    font-family: Gotham Pro;
+    width:80%;
+    font-size: 24px;
+    padding-left: 15%;
+}
+.question_1 {
+    margin-top:40px;
+    font-style: normal;
+    font-weight: 800;
+    color: #38A84D;
+    font-family: Gotham Pro;
+    width:80%;
+    font-size: 24px;
+    padding-left: 15%;
+    line-height: 30px;
+}
+.answer {
+    font-family: Gotham Pro;
+    margin-top:60px;
+    color: #38A84D;
+    padding-left: 15%;
+    font-size: 20px;
+    line-height: 60px;
+}
+.answer_1 {
+    font-family: Gotham Pro;
+    margin-top:60px;
+    color: #38A84D;
+    padding-left: 15%;
+    font-size: 20px;
+    line-height: 60px;
+}
+.nextSlide {
+    display: flex;
+
+    padding-left:15%;
+    align-items: center;
+    margin-top:30px;
+
+}
+.nextSlide1 {
+    display: flex;
+    padding-left:15%;
+    align-items: center;
+    margin-top:30px;
+
+}
+
+.nextSlideButton {
+    border:2px solid #38A84D;
+    font-family: Gotham Pro;
+    font-size:16px;
+    color: #38A84D;
+    background:white;
+    outline: none;
+    font-weight: 800;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:120px;
+    height: 35px;
+    border-radius: 25px;
+    transition: 0.4s;
+}
+.nextSlideButton:hover {
+    background:#38A84D;
+    color:white;
+
+}
+#toddler {
+    position: fixed!important;
+    height:20px;
+    bottom:0;
+    width:100%;
+    background: rgba(56, 168, 77, 0.1);
+}
+#toddler_1 {
+    position: fixed!important;
+    height:20px;
+    bottom:0;
+    width:100%;
+    background: rgba(56, 168, 77, 0.1);
+}
+#toddlerBtn {
+    width:10%;
+    height:20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: #38A84D;
+    transition: 0.5s;
+}
+#toddlerBtn_1 {
+    width:17%;
+    height:20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: #38A84D;
+    transition: 0.5s;
+}
+.resultStructure {
+    display:flex;
+    align-items: center;
+    flex-flow: column;
+
+}
+.resultTitle {
+    font-weight: 800;
+    color: #38A84D;
+    width: 65%;
+    font-family: "Gotham Pro";
+    font-size: 32px;
+    margin-top: 5%;
+}
+.resultDesc_1 {
+    width: 65%;
+    font-weight: 300 ;
+    font-size: 24px;
+
+    font-family: "Gotham Pro";
+    letter-spacing: 0.5px;
+    line-height: 26px;
+    color: #0C3614;
+    margin-top: 30px;
+}
+.resultDesc_2 {
+    width: 65%;
+    font-weight: 300 ;
+    font-size: 24px;
+    font-family: "Gotham Pro";
+    letter-spacing: 0.5px;
+    line-height: 26px;
+    color: #0C3614;
+
+}
+.resultSvg {
+
+    margin-bottom: -10px;
+    margin-top: 10px;
+}
+.businessStyle {
+
+    margin-top: 15%;
+    width:100%;
+    display:flex;
+    align-items:center;
+    font-size: 20px;
+    background: #38A84D;
+    color:white;
+    font-weight:lighter;
+    padding-left:15%;
+    height:50px;
+}
+.rightImg {
+    float:right;
+    margin: -30px 0 10px 20px;
+}
+.imgUnder {
+    display: none;
+}
+
+
+/* Ð¡Ð»Ð°Ð¹Ð´-Ð¿Ñ€Ð¸Ð²ÐµÑ‚ÑÑ‚Ð²Ð¸Ðµ */
+.center-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logoVyshka {
+    margin-top: 30px;
+}
+.logoVyshka svg {
+    width:220px;
+}
+
+.titleMain {
+    text-align:center;
+    color:white;
+    display: flex;
+    font-family: "Gotham Pro";
+    justify-content: center;
+    align-items: center;
+    line-height: 61px;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: bold;
+
+    text-shadow: 0px 0px 70px rgba(0, 0, 0, 0.25);
+    letter-spacing: 0.02em;
+}
+.titleDesc {
+    text-align:center;
+    margin-top: 50px;
+    width: 70%;
+    font-family: "Gotham Pro";
+    font-style: normal;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    font-size: 20px;
+    line-height: 21px;
+    text-align: center;
+    color: white;
+    text-shadow: 0px 1px 20px rgba(0, 0, 0, 0.25);
+}
+
+.buttonStart {
+    margin-top: 70px;
+    color: white;
+    font-family: "Gotham Pro";
+    text-decoration: none;
+    background: 0;
+    border: 4px solid white;
+    box-sizing:border-box;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 24px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    line-height: 33px;
+    padding: 8px 60px;
+    outline: none;
+    letter-spacing:1px;
+}
+.buttonStart:hover {
+    text-decoration: none;
+    color:white;
+    background: #8EC485;
+    box-shadow: 0px 4px 5px grey;
+}
+
+/* Ð¡Ð»Ð°Ð¹Ð´-Ñ‡Ð°ÑÑ‚Ð¸ Ñ‚ÐµÑÑ‚Ð° */
+.partOfQuiz {
+    margin-top: 100px;
+    font-family: "Gotham Pro";
+    font-size: 24px;
+    color: white;
+
+}
+.timePass {
+    margin-top:40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.timePass svg {
+    fill: white;
+    margin-top: 4px;
+    text-shadow: 0px 1px 20px rgba(0, 0, 0, 0.25);
+    margin-right: 14px;
+}
+.timePassTitle {
+    font-family: 'Gotham Pro';
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+
+    letter-spacing: 0.02em;
+    color: white;
+}
+
+@media (max-width: 820px) {
+    .answer li {
+
+        width:50%;
+    }
+    .answer_1 li {
+
+        width:50%;
+    }
+    .stepCounter {
+        margin-top:20px;
+    }
+
+}
+/* мобилка */
+@media (max-width: 680px) {
+    .logoVyshka {
+        margin-top:20px;
+
+    }
+    .logoVyshka svg {
+        width:180px;
+
+    }
+    .titleMain {
+
+        font-size:40px;
+        line-height:40px;
+        margin-top:20px;
+    }
+    .titleDesc {
+        font-size:20px;
+
+        width: 90%;
+        margin-top:40px;
+        line-height:21px;
+    }
+    .buttonStart {
+
+        border-radius: 50px;
+        font-size:18px;
+        padding: 5px 50px;
+    }
+    .question {
+        margin-top:20px;
+        font-size:16px;
+
+    }
+    .question_1 {
+        margin-top:20px;
+        font-size:16px;
+    }
+    .stepCounter1 {
+        margin-top:40px;
+    }
+    .answer {
+        margin-top:18px;
+        font-size:14px
+    }
+    .answer_1 {
+        margin-top:18px;
+        font-size:14px
+    }
+    .answer li {
+        line-height: 13px;
+        margin-bottom:20px;
+    }
+    .answer_1 li {
+        margin-top:18px;
+        font-size:14px
+    }
+    .resultTitle {
+        font-size:22px;
+        width: 90%;
+        line-height:20px;
+    }
+    .resultDesc_1 {
+        width:90%;
+        font-size:16px;
+        line-height: 18px;
+    }
+    .resultDesc_2 {
+        width:90%;
+        font-size:16px;
+        line-height: 18px;
+    }
+    .rightImg {
+        display:none;
+    }
+    .imgUnder {
+        display: block;
+    }
+    .nextSlide {
+        margin-top:10px;
+    }
+    .nextSlide1 {
+        margin-top:10px;
+    }
+}
+@media (max-width: 480px) {
+    .logoVyshka {
+        margin-top:5px;
+
+    }
+    .logoVyshka svg {
+        width:160px;
+    }
+    .titleMain {
+        font-size:4vh;
+        line-height: 5vh;
+        margin:0;
+    }
+    .titleDesc {
+        font-size:14px;
+        width: 100%;
+        margin-top:20px;
+        line-height:14px;
+    }
+    .buttonStart {
+        margin-top:30px;
+        border-radius: 50px;
+        font-size:18px;
+        padding: 5px 50px;
+        margin-bottom:100px;
+    }
+    .question {
+        line-height: 18px;
+    }
+    .question_1 {
+        line-height: 18px;
+    }
+    .answer label {
+        line-height: 15px;
+    }
+    .answer_1 label {
+        line-height: 15px;
+    }
+
+    .answer {
+        margin-top:20px;
+
+        font-size:14px;
+        padding:5%;
+
+    }
+    .answer li {
+        width: 70%;
+    }
+    .answer_1 li {
+        width: 80%;
+    }
+    .answer_1 {
+        margin-top:10px;
+
+        font-size:14px;
+        padding:5%;
+
+    }
+    .nextSlide {
+        padding-left:15%;
+        margin-top:-20px;
+        margin-bottom:80px;
+
+    }
+    .nextSlide1 {
+        padding-left:15%;
+        margin-top:-20px;
+        margin-bottom:80px;
+    }
+
+
+    .businessStyle {
+        padding-left:5%;
+        font-size:14px;
+        height:30px;
+    }
+    .imgUnder {
+
+        width:250px;
+    }
+
+}
+@media (max-width: 320px) {
+    .logoVyshka {
+        margin-top:0;
+        margin-bottom:-50px;
+
+    }
+    .logoVyshka svg {
+        width:120px;
+    }
+    .buttonStart {
+        font-size:12px;
+
+    }
+    .buttonStart {
+
+        font-size: 12px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:40px;
+        width:220px;
+
+
+    }
+    .partOfQuiz {
+        margin-top:20px;
+        margin-bottom:50px;
+    }
+    .timePass {
+        margin-top:10px;
+    }
+
+
+
+}
+@media (max-width: 480px) {
+    .answer li:hover  input[type='radio']:before {
+        border: 2px solid #38A84D;
+
+        background: white;
+
+    }
+}
+@media (max-width: 480px) {
+    .answer input[type='radio']:hover:before {
+        border: 2px solid #38A84D;
+
+        background: white;
+        border:2px solid white;
+    }
+}
